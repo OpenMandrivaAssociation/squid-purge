@@ -1,6 +1,6 @@
 %define name    squid-purge
 %define version 20040201
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -14,7 +14,6 @@ Patch0:     purge-gcc4.patch
 Patch1:     make-install.patch
 #BuildRequires:  openssl-devel >= 0.9.7
 #Requires:	apache
-Requires:	openssl
 Suggests:	webproxy
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
@@ -26,10 +25,6 @@ your cache. The purge tool can also be used to release objects which URLs
 match user specified regular expressions. A more troublesome feature is the
 ability to remove files squid does not seem to know about any longer.
 
-    USE AT YOUR OWN RISK! NO GUARANTEES, WHATSOEVER! DON'T BLAME US!
-                         YOU HAVE BEEN WARNED!
-
-
 %prep
 %setup -q -n purge
 %patch0 -p0 -b .gcc4
@@ -39,9 +34,8 @@ ability to remove files squid does not seem to know about any longer.
 %make CXX="g++ %optflags"
 
 
-#%install
-
-%makeinstall
+%install
+#%makeinstall
 mv purge squid-purge
 install -d  %{buildroot}%{_sbindir}
 install -m0700  squid-purge %{buildroot}%{_sbindir}/squid-purge
