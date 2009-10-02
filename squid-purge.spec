@@ -12,7 +12,7 @@ URL:        http://www.squid-cache.org/contrib/
 Source:     http://www.squid-cache.org/contrib/purge-%{version}-src.tar.gz
 Patch0:     purge-gcc4.patch
 Patch1:     make-install.patch
-BuildRequires:  libstdc++6
+BuildRequires:  libstdc++6 = 4.4.1-3mnb2
 #Requires:	apache
 Suggests:	webproxy
 BuildRoot:  %{_tmppath}/%{name}-%{version}
