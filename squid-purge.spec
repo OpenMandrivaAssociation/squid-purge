@@ -31,7 +31,7 @@ ability to remove files squid does not seem to know about any longer.
 %patch1 -p0 -b .make
 
 %build
-%make CXX="g++ %optflags" OPT_NORM="" SOCKLEN=socklen_t
+%make CXX="g++ %optflags" OPT_NORM="" SOCKLEN=socklen_t EXTRALIB="-lstdc++"
 
 
 %install
