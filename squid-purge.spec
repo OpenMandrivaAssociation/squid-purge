@@ -1,6 +1,6 @@
 %define name    squid-purge
 %define version 20040201
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
@@ -12,6 +12,7 @@ URL:        http://www.squid-cache.org/contrib/
 Source:     http://www.squid-cache.org/contrib/purge-%{version}-src.tar.gz
 Patch0:     purge-gcc4.patch
 Patch1:     make-install.patch
+Patch2:     purge-conf.patch
 BuildRequires:  gcc-c++
 #Requires:	apache
 Suggests:	webproxy
@@ -29,6 +30,7 @@ ability to remove files squid does not seem to know about any longer.
 %setup -q -n purge
 %patch0 -p0 -b .gcc4
 %patch1 -p0 -b .make
+%patch2 -p0 -b .etc
 
 %build
 %make CXX="g++ %optflags" OPT_NORM="" SOCKLEN=socklen_t EXTRALIB="-lstdc++"
