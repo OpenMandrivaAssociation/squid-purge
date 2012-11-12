@@ -1,0 +1,11 @@
+--- conffile.hh	2000-09-21 15:05:31.000000000 +0200
++++ conffile.hh.dlucio	2010-01-12 14:17:06.000000000 +0100
+@@ -55,7 +55,7 @@
+ 
+ 
+ #ifndef DEFAULT_SQUID_CONF
+-#define DEFAULT_SQUID_CONF "/usr/local/squid/etc/squid.conf"
++#define DEFAULT_SQUID_CONF "/etc/squid/squid.conf"
+ #endif // DEFAULT_SQUID_CONF
+ 
+ #include <stdio.h>      // FILE*

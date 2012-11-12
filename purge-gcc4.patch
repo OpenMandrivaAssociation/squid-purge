@@ -1,0 +1,11 @@
+--- copyout.cc	2000-09-21 08:05:31.000000000 -0500
++++ copyout.cc.dlucio	2009-10-01 12:27:54.756154523 -0500
+@@ -132,7 +132,7 @@
+   static const char* index = "index.html";
+   
+   // find hostname part after the scheme (okok, not counting port, etc.)
+-  char* ptr = strstr( url, "://" );
++  const char* ptr = strstr( url, "://" );
+   if ( ptr == 0 || strlen(ptr) < 4 ) return false;
+ 
+   // create filename to store contents into

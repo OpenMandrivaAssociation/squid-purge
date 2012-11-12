@@ -1,0 +1,7 @@
+--- Makefile	2000-09-21 08:05:31.000000000 -0500
++++ Makefile.dlucio	2009-10-01 16:49:03.687107041 -0500
+@@ -179,3 +179,4 @@
+ 	( cd .. ; gtar cvzf purge-`date +"%Y%m%d"`-src.tar.gz $(DIST) )
+ tar: distclean ci-all
+ 	( cd .. ; gtar cvzf purge-`date +"%Y%m%d"`-all.tar.gz purge )
++install:
