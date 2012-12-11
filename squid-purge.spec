@@ -53,3 +53,26 @@ install -m0700  squid-purge %{buildroot}%{_sbindir}/squid-purge
 %{_sbindir}/squid-purge
 
 
+
+
+%changelog
+* Tue Jan 12 2010 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 20040201-3mdv2010.1
++ Revision: 490217
+- P2: look for /etc/squid/squid.conf by default
+
+* Fri Oct 02 2009 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 20040201-2mdv2010.0
++ Revision: 452724
+- from static to dynamic
+- again
+- again
+- again
+- Buildrequiere add
+- SOCKLEN=socklen_t to let work in x86_64
+- OPT_NORM='' to let work in x86_64
+- Some changes for mdva policy
+- import squid-purge
+
+
+* Thu Sep  1 2009 Daniel Lucio <dlucio@okay.com.mx> 20040201-1mdv2010.0
+- First package
+
