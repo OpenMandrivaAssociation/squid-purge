@@ -1,6 +1,6 @@
 %define name    squid-purge
 %define version 20040201
-%define release %mkrel 3
+%define release 4
 
 Name:		%{name}
 Version:	%{version}
