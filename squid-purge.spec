@@ -8,7 +8,7 @@ Release:	%{release}
 Summary:    Squid pruger utility
 License:    GPLv2+
 Group:      Networking/Other
-URL:        http://www.squid-cache.org/contrib/
+URL:        https://www.squid-cache.org/contrib/
 Source:     http://www.squid-cache.org/contrib/purge-%{version}-src.tar.gz
 Patch0:     purge-gcc4.patch
 Patch1:     make-install.patch
