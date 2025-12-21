@@ -13,6 +13,7 @@ Source:     http://www.squid-cache.org/contrib/purge-%{version}-src.tar.gz
 Patch0:     purge-gcc4.patch
 Patch1:     make-install.patch
 Patch2:     purge-conf.patch
+BuildRequires:	make
 BuildRequires:  gcc-c++
 #Requires:	apache
 Suggests:	webproxy
